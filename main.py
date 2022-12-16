@@ -104,11 +104,14 @@ for folder_name in folder_names:
             # If term already exists in the positional index dictionary.
             if term in pos_index:
 
-                # Increment total freq by 1.
-                pos_index[term][0] = pos_index[term][0] + 1
+                
+                
 
                 # Check if the term has existed in that DocID before.
                 if file_name in pos_index[term][1]:
+                    # Increment total freq by 1.
+                    pos_index[term][0] = pos_index[term][0] + 1
+                    
                     pos_index[term][1][file_name].append(pos)
 
                 # add new doc in pos index
